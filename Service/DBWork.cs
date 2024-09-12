@@ -61,7 +61,8 @@ namespace Service
                 "Mechanic " +
                 " (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 " number INTEGER," +
-                " name VARCHAR);";
+                " name VARCHAR," +
+                "Avatar BLOB);";
         
     string init_data_mechanic = "INSERT INTO Mechanic (number, name) " +
                 "VALUES " +
@@ -135,6 +136,10 @@ static public List<string> GetMechanics()
 
                 return result;
         }
+static public void AddAvatar(string _name, byte[] _image)
+{
+
+}
 static public void AddData(string _newCategoryInsert, string _dbname = "Servis.db")
 {
     string path = $"Data Source={_dbname};";
